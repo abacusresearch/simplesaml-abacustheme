@@ -55,6 +55,8 @@ if(array_key_exists('header', $this->data)) {
 
 	<link rel="stylesheet" type="text/css" href="<?php echo SimpleSAML_Module::getModuleURL('abacustheme/css/abacus.css'); ?>" />
 	<link rel="stylesheet" type="text/css" href="<?php echo SimpleSAML_Module::getModuleURL('abacustheme/css/default.css'); ?>" />
+	<link rel="stylesheet" type="text/css" href="<?php echo SimpleSAML_Module::getModuleURL('abacustheme/css/bootstrap.min.css'); ?>" />
+	<link rel="stylesheet" type="text/css" href="<?php echo SimpleSAML_Module::getModuleURL('abacustheme/css/bootstrap-responsive.min.css'); ?>" />
 	<link rel="icon" type="image/icon" href="<?php echo SimpleSAML_Module::getModuleURL('abacustheme/pics/favicon.ico'); ?>" />
 
 <?php
@@ -112,6 +114,7 @@ if(array_key_exists('head', $this->data)) {
 	echo '<!-- head -->' . $this->data['head'] . '<!-- /head -->';
 }
 ?>
+<script type="text/javascript" src="<?php echo SimpleSAML_Module::getModuleURL('abacustheme/js/bootstrap.min.js'); ?>"></script>
 </head>
 <?php
 $onLoad = '';

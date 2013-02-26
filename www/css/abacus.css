@@ -11,9 +11,9 @@
 	border: 0;
 	border-collapse: collapse;
 	border-spacing: 0;
-	font-size:11px;
+	font-size:15px;
 	outline: none;
-	line-height: 14px;
+	line-height: 18px;
 	text-decoration:none;
 }
 html {
@@ -30,19 +30,22 @@ body {
 	height:100%;
 	display:block;
   	color:#565656;
-	line-height: 16px;
+	line-height: 18px;
 	font-weight:normal;
-	font-size:12px;
+	font-size:15px;
 	font-family:Verdana , Arial, Helvetica, sans-serif;
 }
 ul {
 	list-style: none;
 }
 p {
-	line-height:15px;
+	
 	font-weight:normal;	
-	font-size:11px;
+	font-size:15px;
 	color:#565656;
+        line-height:18px;
+        
+        
 }
 h1 {
 	font-size:14px;	
@@ -425,4 +428,5 @@ a:hover {color:#565656}
 	height:63px;
 	line-height:63px;
 }
+
 
