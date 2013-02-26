@@ -319,7 +319,8 @@ caption {
 .float-l {
 	float: left;
 }
-.mobileid-controls {display:block;width:100%;float:left;}
+.control-group {float:float;}
+.mobileid-controls {float:left;margin:18px 0 0 0;}
 .mobileid-btn-send {margin:8px 0 0 0;float:left;}
 .mobileid-input {margin:0 7px 0 0;float:left;}
 input[type=text] , input[type=password]{
@@ -332,12 +333,12 @@ select {height:30px;}
 #dropdownlist {margin:0px 0 0 0;}
 pre {width:900px;display:block;overflow:auto;padding:10px;border:1px solid #d8d8d8;margin:0 0 30px 20px;background:#f9f9f9;}
 .mobileid-ajax-loader {margin:20px 0 0 0}
-.form-actions {display:none;}
 .mobileid-main {float:left;}
 /* Css Mobileid */
 #msg_wait {display:block;}
 img.error {height:64px; float:left; margin:5px;}
-input.mobileid-msisdn {min-width:300px;margin:0 7px 0 0;float:left;}
-.form-actions {width:575px;border:0px;}
+input.mobileid-msisdn {margin:0 0px 0 0;float:left;}
+div.form-actions {border:0px;background:none;float:left;margin:0 0 0 0;}
 #msg_error {display:none;}
 .alert-error {floart:left;display:block;margin:20px 0 0 0;width:600px;}
+#submit_btn_cancel {display: none}
