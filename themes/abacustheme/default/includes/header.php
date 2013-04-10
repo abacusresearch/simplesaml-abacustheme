@@ -161,7 +161,7 @@ if($onLoad !== '') {
                                                                 'fi' => 'Suomeksi',
                                                                 'es' => 'Español',
                                                                 'fr' => 'FR',
-                                                                'it' => 'Italiano',
+                                                                'it' => 'IT',
                                                                 'nl' => 'Nederlands',
                                                                 'lb' => 'Luxembourgish', 
                                                                 'cs' => 'Czech',
