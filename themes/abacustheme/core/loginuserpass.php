@@ -16,8 +16,9 @@ if ($this->data['errorcode'] !== NULL) {
 	<div style="border-left: 1px solid #e8e8e8; border-bottom: 1px solid #e8e8e8; background: #f5f5f5">
 		<img src="/<?php echo $this->data['baseurlpath']; ?>resources/icons/experience/gtk-dialog-error.48x48.png" class="float-l" style="margin: 15px " />
 		<h2><?php echo $this->t('{login:error_header}'); ?></h2>
-		<p><b><?php echo htmlspecialchars($this->t('{errors:title_' . $this->data['errorcode'] . '}', $this->data['errorparams'])); ?></b></p>
-		<p><?php echo htmlspecialchars($this->t('{errors:descr_' . $this->data['errorcode'] . '}', $this->data['errorparams'])); ?></p>
+                <p><b><?php echo $this->t('{errors:title_' . $this->data['errorcode'] . '}'); ?></b></p>
+                <p><?php echo $this->t('{errors:descr_' . $this->data['errorcode'] . '}'); ?></p>
+
 	</div>
 <?php
 }
@@ -134,11 +135,17 @@ if(!empty($this->data['links'])) {
 	echo '</ul>';
 }
 
+$state_vars = '';
+foreach ($this->data['stateparams'] as $name => $value) {
+        $state_vars .=urlencode($name) . '=' . urlencode($value) . '&';
+}
 
-
+$lostPasswordUrl = "/idp/module.php/selfregister/lostPassword.php?" . $state_vars;
+$newUserUrl = "/idp/module.php/selfregister/newUser.php?" . $state_vars;
 
 echo('<h2>' . $this->t('{login:help_header}') . '</h2>');
-echo('<p>' . $this->t('{login:help_text}') . '</p>');
+echo('<p>' . $this->t('{abacustheme:login:help_text}', array('%LOSTPASSWORDURL%' => $lostPasswordUrl, '%NEWUSERURL%' => $newUserUrl)) . '</p>');
+
 
 $this->includeAtTemplateBase('includes/footer.php');
 ?>
