@@ -1,4 +1,7 @@
 {
+	"user_pass_header": {
+		"de": "Bitte geben Sie Ihre E-Mail Adresse und Passwort ein"
+	},
 	"email": {
 		"en": "E-Mail",
 		"de": "E-Mail",

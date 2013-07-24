@@ -1,4 +1,7 @@
 {
+	"user_pass_header": {
+		"en": "Enter your e-mail and password"
+	},
 	"email": {
 		"en": "E-Mail"
 	}

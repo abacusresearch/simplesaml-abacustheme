@@ -1,5 +1,5 @@
 <?php
-$this->data['header'] = $this->t('{login:user_pass_header}');
+$this->data['header'] = $this->t('{abacustheme:login:user_pass_header}');
 
 if (strlen($this->data['username']) > 0) {
 	$this->data['autofocus'] = 'password';
