@@ -23,7 +23,7 @@ if ($this->data['errorcode'] !== NULL) {
 <?php
 }
 ?>
-	<h2 style="break: both"><?php echo $this->t('{login:user_pass_header}'); ?></h2>
+	<h2 style="break: both"><?php echo $this->t('{abacustheme:login:user_pass_header}'); ?></h2>
 
 	<p><?php echo $this->t('{login:user_pass_text}'); ?></p>
 
