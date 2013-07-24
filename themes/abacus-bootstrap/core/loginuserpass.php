@@ -153,7 +153,7 @@ $(document).ready(function(){
             <div class="form-actions register-action" style="display:none">
                 <a tabindex="4" class="btn btn-primary btn-register">
                     <i class="icon-off icon-white"></i>
-                    <?php echo $this->t('{abacustheme:selfregister:link_newuser}'); ?>
+                    <?php echo $this->t('{selfregister:selfregister:link_newuser}'); ?>
                 </a>
             </div>
         </form>

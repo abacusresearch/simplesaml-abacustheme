@@ -12,7 +12,7 @@ $this->includeAtTemplateBase('includes/header.php'); ?>
 <?php }?>
 
 <!--<h1><?php echo $this->t('s3_head'); ?></h1> -->
-<p><?php echo $this->t('s3_intro'); ?></p>
+<!--<p><?php echo $this->t('s3_intro'); ?></p>-->
 <?php print $this->data['formHtml']; ?>
     </div>
 </div>

@@ -12,7 +12,7 @@ $this->includeAtTemplateBase('includes/header.php'); ?>
 <?php if(isset($this->data['error'])){ ?>
           <div class="alert alert-error"><?php echo $this->data['error']; ?></div>
 <?php }?>
-	<p><?php echo $this->t('s2_para1'); ?></p>
+	<div class="alert alert-success"><?php echo $this->t('s2_para1'); ?></div>
 
         <form action="?" method="post" name="f" class="well form-horizontal">
 <?php
@@ -41,7 +41,7 @@ $this->includeAtTemplateBase('includes/header.php'); ?>
                 </div>
 	    </div>
             <div class="control-group">
-                <label for="token_part2" class="control-label"><?php echo $this->t('{abacustheme:selfregister:activation_code}'); ?></label>
+                <label for="token_part2" class="control-label"><?php echo $this->t('{selfregister:selfregister:activation_code}'); ?></label>
                 <div class="controls">
                     <div class="input-prepend">
                         <span class="add-on"><i class="icon-lock"></i></span>
@@ -54,7 +54,7 @@ $this->includeAtTemplateBase('includes/header.php'); ?>
             <div class="form-actions">
                 <button type="submit" tabindex="4" class="btn btn-primary">
                     <i class="icon-off icon-white"></i>
-                    <?php echo $this->t('{abacustheme:selfregister:submit}'); ?>
+                    <?php echo $this->t('{selfregister:selfregister:submit}'); ?>
                 </button>
             </div>
         </form>

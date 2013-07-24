@@ -33,7 +33,7 @@ $this->includeAtTemplateBase('includes/header.php'); ?>
             <div class="form-actions" id="submit-action">
                 <button type="submit" tabindex="4" class="btn btn-primary">
                     <i class="icon-off icon-white"></i>
-                    <?php echo $this->t('{abacustheme:selfregister:submit_mail}'); ?>
+                    <?php echo $this->t('{selfregister:selfregister:submit_mail}'); ?>
                 </button>
             </div>
         </form>

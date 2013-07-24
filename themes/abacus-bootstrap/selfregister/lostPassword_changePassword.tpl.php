@@ -11,8 +11,8 @@ $this->includeAtTemplateBase('includes/header.php'); ?>
           <div class="alert alert-error"><?php echo $this->data['error']; ?></div>
 <?php }?>
 
-<h1><?php echo $this->t('lpw_head'); ?></h1>
-<p><?php echo $this->t('lpw_reg_para1', array('%UID%' => $this->data['uid']) ); ?></p>
+<!--<h1><?php echo $this->t('lpw_head'); ?></h1> -->
+<div class="alert alert-success"><?php echo $this->t('lpw_reg_para1', array('%UID%' => $this->data['uid']) ); ?></div>
 <?php print $this->data['formHtml']; ?>
 </div>
 </div>
