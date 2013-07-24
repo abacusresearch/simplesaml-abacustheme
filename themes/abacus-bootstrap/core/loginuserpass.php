@@ -1,5 +1,5 @@
 <?php
-$this->data['header'] = $this->t('{login:user_pass_header}');
+$this->data['header'] = $this->t('{abacustheme:login:user_pass_header}');
 
 if (strlen($this->data['username']) > 0) {
 	$this->data['autofocus'] = 'password';
@@ -54,7 +54,7 @@ $(document).ready(function(){
 
 <div class="row-fluid">
     <div class="span8 offset2">
-<!--        <h2><?php echo $this->t('{login:user_pass_header}'); ?></h2> -->
+<!--        <h2><?php echo $this->t('{abacustheme:login:user_pass_header}'); ?></h2> -->
 <!--        <p><?php echo $this->t('{login:user_pass_text}'); ?></p> -->
         <?php if ($this->data['errorcode'] !== NULL) { ?>
         <div class="alert alert-block alert-error">
