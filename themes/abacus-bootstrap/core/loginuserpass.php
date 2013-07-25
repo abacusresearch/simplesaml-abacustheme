@@ -14,7 +14,6 @@ $this->includeAtTemplateBase('includes/header.php');
 function updateUserState()
 {
 	if (document.getElementById('username').value) {
-	console.log(document.getElementById('username').value);
     $.ajax({
         type: 'POST',
         cache: false,
@@ -34,8 +33,6 @@ function updateUserState()
 		$(".register-action").show();
 		$(".btn-register").attr("href","<?php echo SimpleSAML_Utilities::getBaseURL(); ?>module.php/selfregister/newUser.php?email=" + encodeURIComponent(document.getElementById('username').value) + "<?php echo "&AuthState=" . urlencode($_REQUEST['AuthState']) . '"'?>);
 	    }
-            console.log(data.email);
-            console.log(data.exists);
         }
     });
     } else {
