@@ -1,11 +1,17 @@
 {
 	"user_pass_header": {
-		"de": "Bitte geben Sie Ihre E-Mail Adresse und Passwort ein"
+		"de": "Bitte geben Sie Ihre E-Mail Adresse ein"
 	},
 	"email": {
 		"en": "E-Mail",
 		"de": "E-Mail",
 		"fr": "E-Mail",
 		"it": "E-Mail"
+	},
+	"link_next": {
+		"de": "Weiter"
+	},
+	"register_user_message": {
+		"de": "Benutzer existiert noch nicht. Bitte registrieren Sie sich."
 	}
 }

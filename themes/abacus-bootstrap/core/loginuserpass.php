@@ -23,12 +23,14 @@ function updateUserState()
         success: function(data) {
 	    if(data.exists) {
 		$(".login-action").show();
+		$(".next-action").hide();
 		$(".register-action").hide();
 		$("#password").focus();
 		$(".btn-login").removeAttr("disabled");
 		$(".btn-lostpwd").removeAttr("disabled");
 		$(".btn-lostpwd").attr("href","<?php echo SimpleSAML_Utilities::getBaseURL(); ?>module.php/selfregister/lostPassword.php?email=" + encodeURIComponent(document.getElementById('username').value) + "<?php echo "&AuthState=" . urlencode($_REQUEST['AuthState']) . '"'?>);
 	    } else {
+		$(".next-action").hide();
 		$(".login-action").hide();
 		$(".register-action").show();
 		$(".btn-register").attr("href","<?php echo SimpleSAML_Utilities::getBaseURL(); ?>module.php/selfregister/newUser.php?email=" + encodeURIComponent(document.getElementById('username').value) + "<?php echo "&AuthState=" . urlencode($_REQUEST['AuthState']) . '"'?>);
@@ -94,7 +96,7 @@ $(document).ready(function(){
                     </div>
                 </div>
             </div>
-            <div class="control-group login-action">
+            <div class="control-group login-action" style="display:none">
                 <label for="password" class="control-label"><?php echo $this->t('{login:password}'); ?></label>
                 <div class="controls">
                     <div class="input-prepend">
@@ -137,7 +139,7 @@ $(document).ready(function(){
                 echo('<input type="hidden" name="' . htmlspecialchars($name) . '" value="' . htmlspecialchars($value) . '" />');
             }
             ?>
-            <div class="form-actions login-action">
+            <div class="form-actions login-action" style="display:none">
                 <button type="submit" tabindex="4" class="btn btn-primary btn-login">
                     <i class="icon-off icon-white"></i>
                     <?php echo $this->t('{login:login_button}'); ?>
@@ -148,9 +150,17 @@ $(document).ready(function(){
                 </a>
             </div>
             <div class="form-actions register-action" style="display:none">
+		<p><?php echo $this->t('{abacustheme:login:register_user_message}');?>
+		</p>
                 <a tabindex="4" class="btn btn-primary btn-register">
                     <i class="icon-off icon-white"></i>
                     <?php echo $this->t('{selfregister:selfregister:link_newuser}'); ?>
+                </a>
+            </div>
+            <div class="form-actions next-action">
+                <a tabindex="4" class="btn btn-primary btn-next">
+                    <i class="icon-off icon-white"></i>
+                    <?php echo $this->t('{abacustheme:login:link_next}'); ?>
                 </a>
             </div>
         </form>
