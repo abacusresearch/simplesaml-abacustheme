@@ -20,7 +20,7 @@ if ($this->data['errorcode'] !== NULL && array_key_exists('msisdn', $_REQUEST)) 
 }
 ?>
 
-<img style="height:100px; display:inline;padding:0px;margin:0 20px 0 0; float:right;" src="<?php echo(SimpleSAML_Module::getModuleURL('mobileid/resources/logo.gif')); ?>" />
+<img style="height:100px; display:inline;padding:0px;margin:0 20px 0 0; float:right;" src="<?php echo(SimpleSAML_Module::getModuleURL('abacustheme/pics/swisscom.gif')); ?>" />
 
 <div class="mobileid-main">
 <h2 style=""><?php echo $this->t('{mobileid:Auth:header}'); ?></h2>
