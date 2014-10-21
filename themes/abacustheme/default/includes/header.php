@@ -207,12 +207,6 @@ if($onLoad !== '') {
 	?>
 			</div>
 		</div>
-		<div id="header-section-folgeseite">
-			<div id="mainnavigation"></div>
-			
-<div id="header-image-folgeseite" class="randomimage" style="background-image:url('<?php echo SimpleSAML_Module::getModuleURL('abacustheme/pics/folgeseite_01.jpg');?>')"><div id="slogans"><span></span></div></div>
-
-		</div>
 		<div id="content-section-folgeseite">
 			
 			

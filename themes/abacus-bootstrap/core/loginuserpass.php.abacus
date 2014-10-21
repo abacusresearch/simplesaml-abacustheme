@@ -1,5 +1,5 @@
 <?php
-$this->data['header'] = $this->t('{abacustheme:login:user_pass_header}');
+$this->data['header'] = $this->t('{login:user_pass_header}');
 
 if (strlen($this->data['username']) > 0) {
 	$this->data['autofocus'] = 'password';
@@ -23,14 +23,14 @@ if ($this->data['errorcode'] !== NULL) {
 <?php
 }
 ?>
-	<h2 style="break: both"><?php echo $this->t('{abacustheme:login:user_pass_header}'); ?></h2>
+<!--	<h2 style="break: both"><?php echo $this->t('{login:user_pass_header}'); ?></h2> -->
 
-	<p><?php echo $this->t('{login:user_pass_text}'); ?></p>
+<!--	<p><?php echo $this->t('{login:user_pass_text}'); ?></p> -->
 
 	<form action="?" method="post" name="f">
 	<table>
 		<tr>
-			<td rowspan="3" width="80px"><img src="/<?php echo $this->data['baseurlpath']; ?>resources/icons/experience/gtk-dialog-authentication.48x48.png" alt="" /></td>
+<!--			<td rowspan="3" width="80px"><img src="/<?php echo $this->data['baseurlpath']; ?>resources/icons/experience/gtk-dialog-authentication.48x48.png" alt="" /></td> -->
 			<td width="120px"><?php echo $this->t('{login:username}'); ?></td>
 			<td>
 <?php
@@ -143,9 +143,8 @@ foreach ($this->data['stateparams'] as $name => $value) {
 $lostPasswordUrl = "/idp/module.php/selfregister/lostPassword.php?" . $state_vars;
 $newUserUrl = "/idp/module.php/selfregister/newUser.php?" . $state_vars;
 
-echo('<h2>' . $this->t('{login:help_header}') . '</h2>');
-echo('<p>' . $this->t('{abacustheme:login:help_text}', array('%LOSTPASSWORDURL%' => $lostPasswordUrl, '%NEWUSERURL%' => $newUserUrl)) . '</p>');
-
+//echo('<h2>' . $this->t('{login:help_header}') . '</h2>');
+//echo('<p>' . $this->t('{abacustheme:login:help_text}', array('%LOSTPASSWORDURL%' => $lostPasswordUrl, '%NEWUSERURL%' => $newUserUrl)) . '</p>');
 
 $this->includeAtTemplateBase('includes/footer.php');
 ?>

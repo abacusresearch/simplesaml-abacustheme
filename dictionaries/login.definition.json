@@ -1,0 +1,14 @@
+{
+	"user_pass_header": {
+		"en": "Enter your e-mail"
+	},
+	"email": {
+		"en": "E-Mail"
+	},
+	"link_next": {
+		"en": "Next"
+	},
+	"register_user_message": {
+		"en": "User doesn't exist yet. Register now."
+	}
+}
