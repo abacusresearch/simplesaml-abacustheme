@@ -74,7 +74,9 @@ if (!empty($jquery)) {
     if (isset($jquery['ui']) && $jquery['ui'])
         echo ('<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/' .  $version . '/jquery-ui.min.js"></script>');
 }
+
 ?>
+<script type="text/javascript" src="<?php echo SimpleSAML_Module::getModuleUrl('abacustheme/js/bootstrap.min.js') ?>"></script>
 
 <?php
 
@@ -136,7 +138,7 @@ if($onLoad !== '') {
 }
 ?>
 <body<?php echo $onLoad; ?>>
-<div class="navbar navbar-fixed-top">
+<div class="navbar">
     <div class="navbar-inner">
         <div class="container-fluid">
             <button class="btn btn-navbar" data-toggle="collapse">
@@ -219,8 +221,8 @@ if($onLoad !== '') {
     </div>
 </div>
 
-<div class="container-fluid" style="padding-top: 50px;">
-	<div class="row-fluid">
+<div class="container-fluid">
+	<div class="row-fluid hidden-xs">
 		<div class="span8 offset2">
 		    <header class="page-header">
 			<img src="<?php echo SimpleSAML_Module::getModuleUrl('abacustheme/pics/abacus_logo.gif') ?>" style="padding-bottom:20px"/>

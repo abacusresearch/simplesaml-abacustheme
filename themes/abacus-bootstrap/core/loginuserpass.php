@@ -51,11 +51,9 @@ $(document).ready(function(){
 </script>
 
 
+<?php if ($this->data['errorcode'] !== NULL) { ?>
 <div class="row-fluid">
     <div class="span8 offset2">
-<!--        <h2><?php echo $this->t('{abacustheme:login:user_pass_header}'); ?></h2> -->
-<!--        <p><?php echo $this->t('{login:user_pass_text}'); ?></p> -->
-        <?php if ($this->data['errorcode'] !== NULL) { ?>
         <div class="alert alert-block alert-error">
             <h4 class="alert-heading">
                 <img src="/<?php echo $this->data['baseurlpath']; ?>resources/icons/experience/gtk-dialog-error.48x48.png" class="visible-desktop" />
@@ -64,9 +62,9 @@ $(document).ready(function(){
             </h4>
             <p><?php echo $this->t('{errors:descr_' . $this->data['errorcode'] . '}'); ?></p>
         </div>
-        <?php } ?>
     </div>
 </div>
+<?php } ?>
 
 <div class="row-fluid">
     <div class="span8 offset2">
