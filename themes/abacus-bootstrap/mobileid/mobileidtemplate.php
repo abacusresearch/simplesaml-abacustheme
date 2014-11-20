@@ -23,11 +23,12 @@ if ($this->data['errorcode'] !== NULL && array_key_exists('msisdn', $_REQUEST)) 
 	$_COOKIE["msisdn"] = $_REQUEST['msisdn'];
 }
 ?>
-<div style="border-left: 1px solid #e8e8e8; border-bottom: 1px solid #e8e8e8; background: #f5f5f5; display:none;" id="msg_error">
-	<img src="/<?php echo $this->data['baseurlpath']; ?>resources/icons/experience/gtk-dialog-error.48x48.png" class="float-l" style="margin: 15px " />
-	<h2><?php echo $this->t('{mobileid:errors:error_header}'); ?></h2>
-	<p><?php echo $this->t('{mobileid:errors:descr_' . $this->data['errorcode'] . '}'); ?></p>
+<div style="display:none;" class="alert alert-danger" id="msg_error" role="alert">
+	<span class="glyphicon glyphicon-exclamation-sign" style="font-size: 28px;" aria-hidden="true"></span>
+	<strong><?php echo $this->t('{mobileid:errors:error_header}'); ?></strong><br/>
+	<?php echo $this->t('{mobileid:errors:descr_' . $this->data['errorcode'] . '}'); ?>
 </div>
+<div class="row-fluid" style="margin-bottom: 50px;">
 <form action="?" method="post" name="f" id="mobileid_form" role="form">
 	<div class="form-group">
 		<label for="msisdn"><?php echo $this->t('{mobileid:Auth:intro}'); ?></label>
@@ -51,7 +52,8 @@ if ($this->data['errorcode'] !== NULL && array_key_exists('msisdn', $_REQUEST)) 
 	}
 	?>
 </form>
-<div id="msg_wait" style="display:none;">
+</div>
+<div id="msg_wait" style="display:none;" class="row-fluid">
 	<img class="mobileid-ajax-loader" src="<?php echo(SimpleSAML_Module::getModuleURL('mobileid/resources/ajax-loader.gif')); ?>" alt="<?php echo $this->t('{mobileid:Auth:msg_wait}'); ?>" title="<?php echo $this->t('{mobileid:Auth:msg_wait}'); ?>" />
 	<p><?php echo $this->t('{mobileid:Auth:msg_wait}'); ?></p>
 </div>

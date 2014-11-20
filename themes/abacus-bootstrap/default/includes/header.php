@@ -222,7 +222,7 @@ if($onLoad !== '') {
     </div>
 </nav>
 
-<div class="container-fluid col-sm-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+<div class="container-fluid col-sm-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3" style="max-width:800px;">
 	<div class="row-fluid">
 		    <header class="page-header" style="margin-top:20px">
 			<img src="<?php echo SimpleSAML_Module::getModuleUrl('abacustheme/pics/abacus_logo.gif') ?>" style="padding-bottom:10px"/>
