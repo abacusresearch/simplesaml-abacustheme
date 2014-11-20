@@ -53,13 +53,13 @@ if(array_key_exists('header', $this->data)) {
 ?></title>
 
     <link rel="stylesheet" type="text/css" href="<?php echo SimpleSAML_Module::getModuleUrl('abacustheme/css/bootstrap.min.css') ?>" />
-    <link rel="stylesheet" type="text/css" href="<?php echo SimpleSAML_Module::getModuleUrl('abacustheme/css/bootstrap-responsive.min.css') ?> " />
 	<link rel="icon" type="image/icon" href="<?php echo SimpleSAML_Module::getModuleUrl('abacustheme/pics/favicon.ico') ?>" />
 
 
+<script type="text/javascript" src="<?php echo SimpleSAML_Module::getModuleUrl('abacustheme/js/bootstrap.min.js') ?>"></script>
 <?php
 $jquery = array();
-$jquery['version'] = '1.7';
+$jquery['version'] = '1.11.1';
 $jquery['core'] = 1;
 $jquery['ui'] = 0;
 
@@ -76,7 +76,6 @@ if (!empty($jquery)) {
 }
 
 ?>
-<script type="text/javascript" src="<?php echo SimpleSAML_Module::getModuleUrl('abacustheme/js/bootstrap.min.js') ?>"></script>
 
 <?php
 
@@ -138,16 +137,18 @@ if($onLoad !== '') {
 }
 ?>
 <body<?php echo $onLoad; ?>>
-<div class="navbar">
-    <div class="navbar-inner">
-        <div class="container-fluid">
-            <button class="btn btn-navbar" data-toggle="collapse">
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                 <span class="icon-bar"/>
                 <span class="icon-bar"/>
                 <span class="icon-bar"/>
             </button>
-            <a class="brand" href="">ABACUS Login</a>
-            <ul class="nav pull-right">
+            <a class="navbar-brand" href="">ABACUS Login</a>
+	</div>
+        <div id="navbar" class="navbar-collapse collapse"">
+            <ul class="nav navbar-nav navbar-right">
         <?php 
         
         $includeLanguageBar = TRUE;
@@ -160,7 +161,7 @@ if($onLoad !== '') {
             
             
             echo '<li id="languagebar" class="dropdown">';
-            echo '<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">Language<b class="caret"></b></a>';
+            echo '<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Language<span class="caret"></span></a>';
             echo '<ul class="dropdown-menu" role="menu">';
             $languages = $this->getLanguageList();
             $langnames = array(
@@ -219,18 +220,18 @@ if($onLoad !== '') {
             </ul>
         </div>
     </div>
-</div>
+</nav>
 
-<div class="container-fluid">
-	<div class="row-fluid hidden-xs">
-		<div class="span8 offset2">
-		    <header class="page-header">
-			<img src="<?php echo SimpleSAML_Module::getModuleUrl('abacustheme/pics/abacus_logo.gif') ?>" style="padding-bottom:20px"/>
+<div class="container-fluid col-sm-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+	<div class="row-fluid">
+		    <header class="page-header" style="margin-top:20px">
+			<img src="<?php echo SimpleSAML_Module::getModuleUrl('abacustheme/pics/abacus_logo.gif') ?>" style="padding-bottom:10px"/>
 		    </header>
+	</div>
+	<div class="row-fluid">
 		       <h3>
 			<?php echo (isset($this->data['header']) ? $this->data['header'] : ''); ?>
 		        </h3>
-		</div>
 	</div>
 <?php
 if(!empty($this->data['htmlinject']['htmlContentPre'])) {

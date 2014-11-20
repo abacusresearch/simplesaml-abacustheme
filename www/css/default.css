@@ -319,10 +319,10 @@ caption {
 .float-l {
 	float: left;
 }
-.control-group {float:float;}
-.mobileid-controls {float:left;margin:18px 0 0 0;}
-.mobileid-btn-send {margin:8px 0 0 0;float:left;}
-.mobileid-input {margin:0 7px 0 0;float:left;}
+.control-group {}
+.mobileid-controls {margin:18px 0 0 0;}
+.mobileid-btn-send {margin:8px 0 0 0;}
+.mobileid-input {margin:0 7px 0 0;}
 input[type=text] , input[type=password]{
      margin:8px 4px 0 0;
 }
