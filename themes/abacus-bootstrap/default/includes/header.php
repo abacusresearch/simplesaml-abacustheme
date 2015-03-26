@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php
 
 
@@ -40,7 +39,7 @@ if (array_key_exists('pageid', $this->data)) {
  */
 header('X-Frame-Options: SAMEORIGIN');
 
-?>
+?><!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
