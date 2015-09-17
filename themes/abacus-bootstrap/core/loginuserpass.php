@@ -45,7 +45,7 @@ function updateUserState()
 }
 
 $(document).ready(function(){
-	updateUserState();
+	//updateUserState();
 });
 
 </script>
@@ -94,7 +94,7 @@ $(document).ready(function(){
                     </div>
                 </div>
             </div>
-            <div class="control-group login-action" style="display:none">
+            <div class="control-group login-action">
                 <label for="password" class="control-label"><?php echo $this->t('{login:password}'); ?></label>
                 <div class="controls">
                     <div class="input-prepend">
