@@ -1,6 +1,9 @@
 {
 	"user_pass_header": {
-		"en": "Enter your e-mail"
+		"en": "Enter your username"
+	},
+	"username": {
+		"en": "Username"
 	},
 	"email": {
 		"en": "E-Mail"

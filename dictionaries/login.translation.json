@@ -1,12 +1,19 @@
 {
 	"user_pass_header": {
-		"de": "Bitte geben Sie Ihre E-Mail Adresse ein"
+		"en": "Please enter your user name"
+		"de": "Bitte geben Sie Ihren Benutzername ein"
+		"fr": "Nom d'utilisateur"
 	},
 	"email": {
 		"en": "E-Mail",
 		"de": "E-Mail",
 		"fr": "E-Mail",
 		"it": "E-Mail"
+	},
+	"email": {
+		"en": "Username",
+		"de": "Benutzername",
+		"fr": "Nom d'utilisateur",
 	},
 	"link_next": {
 		"de": "Weiter"

@@ -79,7 +79,7 @@ $(document).ready(function(){
 
         <form action="?" method="post" name="f" class="well form-horizontal">
             <div class="control-group">
-                <label for="username" class="control-label"><?php echo $this->t('{abacustheme:login:email}'); ?></label>
+                <label for="username" class="control-label"><?php echo $this->t('{abacustheme:login:username}'); ?></label>
                 <div class="controls">
                     <div class="input-prepend">
                         <span class="add-on"><i class="icon-envelope"></i></span>
@@ -188,7 +188,7 @@ if(!empty($this->data['links'])) {
 
 <script type="text/javascript">
 $("#username").change(function() {
-  updateUserState();
+  //updateUserState();
 });
 
 </script>
