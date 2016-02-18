@@ -13,15 +13,7 @@ $this->includeAtTemplateBase('includes/header.php');
 
 function updateUserState()
 {
-	if (document.getElementById('username').value) {
-    $.ajax({
-        type: 'POST',
-        cache: false,
-        url: '<?php echo SimpleSAML_Utilities::getBaseURL(); ?>module.php/selfregister/api.php',
-        data: 'id=emailexists&email=' + document.getElementById('username').value,
-        dataType: 'json',
-        success: function(data) {
-	    if(data.exists) {
+    if (document.getElementById('username').value) {
 		$(".login-action").show();
 		$(".next-action").hide();
 		$(".register-action").hide();
@@ -29,14 +21,6 @@ function updateUserState()
 		$(".btn-login").removeAttr("disabled");
 		$(".btn-lostpwd").removeAttr("disabled");
 		$(".btn-lostpwd").attr("href","<?php echo SimpleSAML_Utilities::getBaseURL(); ?>module.php/selfregister/lostPassword.php?email=" + encodeURIComponent(document.getElementById('username').value) + "<?php echo "&AuthState=" . urlencode($_REQUEST['AuthState']) . '"'?>);
-	    } else {
-		$(".next-action").hide();
-		$(".login-action").hide();
-		$(".register-action").show();
-		$(".btn-register").attr("href","<?php echo SimpleSAML_Utilities::getBaseURL(); ?>module.php/selfregister/newUser.php?email=" + encodeURIComponent(document.getElementById('username').value) + "<?php echo "&AuthState=" . urlencode($_REQUEST['AuthState']) . '"'?>);
-	    }
-        }
-    });
     } else {
 		$(".btn-login").attr("disabled", "disabled");
 		$(".btn-lostpwd").attr("disabled", "disabled");
@@ -45,7 +29,7 @@ function updateUserState()
 }
 
 $(document).ready(function(){
-	//updateUserState();
+	updateUserState();
 });
 
 </script>
@@ -188,7 +172,7 @@ if(!empty($this->data['links'])) {
 
 <script type="text/javascript">
 $("#username").change(function() {
-  //updateUserState();
+  updateUserState();
 });
 
 </script>
