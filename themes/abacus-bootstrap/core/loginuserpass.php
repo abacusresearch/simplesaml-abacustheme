@@ -119,10 +119,6 @@ $(document).ready(function(){
                     <i class="icon-off icon-white"></i>
                     <?php echo $this->t('{login:login_button}'); ?>
                 </button>
-                <a tabindex=5 class="btn btn-lostpwd">
-                    <i class="icon icon-refresh"></i>
-                    <?php echo $this->t('{selfregister:selfregister:link_lostpw}'); ?>
-                </a>
             </div>
             <div class="form-actions register-action" style="display:none">
 		<p><?php echo $this->t('{abacustheme:login:register_user_message}');?>
