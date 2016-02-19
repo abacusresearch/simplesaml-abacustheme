@@ -140,7 +140,12 @@ foreach ($this->data['stateparams'] as $name => $value) {
         $state_vars .=urlencode($name) . '=' . urlencode($value) . '&';
 }
 
+$lostPasswordUrl = "/idp/module.php/selfregister/lostPassword.php?" . $state_vars;
+$newUserUrl = "/idp/module.php/selfregister/newUser.php?" . $state_vars;
+
 echo('<h2>' . $this->t('{login:help_header}') . '</h2>');
+echo('<p>' . $this->t('{abacustheme:login:help_text}', array('%LOSTPASSWORDURL%' => $lostPasswordUrl, '%NEWUSERURL%' => $newUserUrl)) . '</p>');
+
 
 $this->includeAtTemplateBase('includes/footer.php');
 ?>
