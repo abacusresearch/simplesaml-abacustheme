@@ -13,18 +13,11 @@ $this->includeAtTemplateBase('includes/header.php');
 
 function updateUserState()
 {
-    if (document.getElementById('username').value) {
 		$(".login-action").show();
 		$(".next-action").hide();
 		$(".register-action").hide();
 		$("#password").focus();
 		$(".btn-login").removeAttr("disabled");
-		$(".btn-lostpwd").removeAttr("disabled");
-		$(".btn-lostpwd").attr("href","<?php echo SimpleSAML_Utilities::getBaseURL(); ?>module.php/selfregister/lostPassword.php?email=" + encodeURIComponent(document.getElementById('username').value) + "<?php echo "&AuthState=" . urlencode($_REQUEST['AuthState']) . '"'?>);
-    } else {
-		$(".btn-login").attr("disabled", "disabled");
-		$(".btn-lostpwd").attr("disabled", "disabled");
-    }
     return false;
 }
 
