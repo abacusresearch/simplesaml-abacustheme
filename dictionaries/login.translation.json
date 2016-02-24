@@ -10,10 +10,10 @@
 		"fr": "E-Mail",
 		"it": "E-Mail"
 	},
-	"email": {
+	"username": {
 		"en": "Username",
 		"de": "Benutzername",
-		"fr": "Nom d'utilisateur",
+		"fr": "Nom d'utilisateur"
 	},
 	"link_next": {
 		"de": "Weiter"
