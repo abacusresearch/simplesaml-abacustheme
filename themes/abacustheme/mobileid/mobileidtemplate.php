@@ -58,7 +58,7 @@ if ($this->data['errorcode'] !== NULL && array_key_exists('msisdn', $_REQUEST)) 
 </form>
 <br/>
 <div id="msg_wait" style="display:none;">
-	<img class="mobileid-ajax-loader" src="<?php echo(SimpleSAML_Module::getModuleURL('mobileid/resources/ajax-loader.gif')); ?>" alt="<?php echo $this->t('{mobileid:Auth:msg_wait}'); ?>" title="<?php echo $this->t('{mobileid:Auth:msg_wait}'); ?>" />
+	<img class="mobileid-ajax-loader" src="<?php echo(SimpleSAML_Module::getModuleURL('abacustheme/pics/ajax-loader.gif')); ?>" alt="<?php echo $this->t('{mobileid:Auth:msg_wait}'); ?>" title="<?php echo $this->t('{mobileid:Auth:msg_wait}'); ?>" />
 	<p><?php echo $this->t('{mobileid:Auth:msg_wait}'); ?></p>
 </div>
 </div>
