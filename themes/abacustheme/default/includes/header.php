@@ -24,7 +24,7 @@ if (array_key_exists('pageid', $this->data)) {
 		'page' => $this->data['pageid']
 	);
 		
-	SimpleSAML_Module::callHooks('htmlinject', $hookinfo);	
+	SimpleSAML\Module::callHooks('htmlinject', $hookinfo);	
 }
 // - o - o - o - o - o - o - o - o - o - o - o - o -
 
@@ -53,11 +53,11 @@ if(array_key_exists('header', $this->data)) {
 }
 ?></title>
 
-	<link rel="stylesheet" type="text/css" href="<?php echo SimpleSAML_Module::getModuleURL('abacustheme/css/abacus.css'); ?>" />
-	<link rel="stylesheet" type="text/css" href="<?php echo SimpleSAML_Module::getModuleURL('abacustheme/css/default.css'); ?>" />
-	<link rel="stylesheet" type="text/css" href="<?php echo SimpleSAML_Module::getModuleURL('abacustheme/css/bootstrap.min.css'); ?>" />
-	<link rel="stylesheet" type="text/css" href="<?php echo SimpleSAML_Module::getModuleURL('abacustheme/css/bootstrap-responsive.min.css'); ?>" />
-	<link rel="icon" type="image/icon" href="<?php echo SimpleSAML_Module::getModuleURL('abacustheme/pics/favicon.ico'); ?>" />
+	<link rel="stylesheet" type="text/css" href="<?php echo SimpleSAML\Module::getModuleURL('abacustheme/css/abacus.css'); ?>" />
+	<link rel="stylesheet" type="text/css" href="<?php echo SimpleSAML\Module::getModuleURL('abacustheme/css/default.css'); ?>" />
+	<link rel="stylesheet" type="text/css" href="<?php echo SimpleSAML\Module::getModuleURL('abacustheme/css/bootstrap.min.css'); ?>" />
+	<link rel="stylesheet" type="text/css" href="<?php echo SimpleSAML\Module::getModuleURL('abacustheme/css/bootstrap-responsive.min.css'); ?>" />
+	<link rel="icon" type="image/icon" href="<?php echo SimpleSAML\Module::getModuleURL('abacustheme/pics/favicon.ico'); ?>" />
 
 <?php
 
@@ -85,7 +85,7 @@ if(!empty($jquery)) {
 			echo('<script type="text/javascript" src="/' . $this->data['baseurlpath'] . 'resources/jquery-ui-16.js"></script>' . "\n");
 	
 		if (isset($jquery['css']) && $jquery['css'])
-			echo('<link rel="stylesheet" media="screen" type="text/css" href="' . SimpleSAML_Module::getModuleURL('abacustheme/uitheme16/ui.all.css') . '"/>' . "\n");	
+			echo('<link rel="stylesheet" media="screen" type="text/css" href="' . SimpleSAML\Module::getModuleURL('abacustheme/uitheme16/ui.all.css') . '"/>' . "\n");	
 	}
 }
 
@@ -114,7 +114,7 @@ if(array_key_exists('head', $this->data)) {
 	echo '<!-- head -->' . $this->data['head'] . '<!-- /head -->';
 }
 ?>
-<script type="text/javascript" src="<?php echo SimpleSAML_Module::getModuleURL('abacustheme/js/bootstrap.min.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo SimpleSAML\Module::getModuleURL('abacustheme/js/bootstrap.min.js'); ?>"></script>
 </head>
 <?php
 $onLoad = '';
@@ -134,7 +134,7 @@ if($onLoad !== '') {
 <div id="main-wrapper">
 	<div id="main">
 		<div id="logo-meta-section">
-			<div id="logo"><img src="<?php echo SimpleSAML_Module::getModuleURL('abacustheme/pics/abacus_logo.gif'); ?>" class="logo" alt="Home" /></div>
+			<div id="logo"><img src="<?php echo SimpleSAML\Module::getModuleURL('abacustheme/pics/abacus_logo.gif'); ?>" class="logo" alt="Home" /></div>
 			<div id="metanavigation">
                             <?php 
 	

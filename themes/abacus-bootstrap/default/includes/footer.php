@@ -11,6 +11,6 @@ if(!empty($this->data['htmlinject']['htmlContentPost'])) {
 </footer>
 </div><!-- /container-fluid -->
 <script type="text/javascript" src="/<?php echo $this->data['baseurlpath']; ?>resources/script.js"></script>
-<script type="text/javascript" src="<?php echo SimpleSAML_Module::getModuleUrl('abacustheme/js/bootstrap.min.js') ?>"></script>
+<script type="text/javascript" src="<?php echo SimpleSAML\Module::getModuleUrl('abacustheme/js/bootstrap.min.js') ?>"></script>
 </body>
 </html>

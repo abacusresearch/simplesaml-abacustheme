@@ -67,7 +67,7 @@ foreach($this->data['metaentries']['remote'] AS $setkey => $set) {
 	foreach($set AS $entry) {
 		echo '<li>';
 		echo ('<a href="' . 
-			htmlspecialchars(SimpleSAML_Module::getModuleURL('core/show_metadata.php', array('entityid' => $entry['entityid'], 'set' => $setkey ))) .
+			htmlspecialchars(SimpleSAML\Module::getModuleURL('core/show_metadata.php', array('entityid' => $entry['entityid'], 'set' => $setkey ))) .
 			'">');
 		if (array_key_exists('name', $entry)) {
 			echo htmlspecialchars($this->getTranslation(SimpleSAML_Utilities::arrayize($entry['name'], 'en')));
@@ -110,7 +110,7 @@ foreach($this->data['metaentries']['remote'] AS $setkey => $set) {
 
             <?php if ($this->data['isadmin']) { ?>
             <div class="span6">
-                <form action="<?php echo SimpleSAML_Module::getModuleURL('core/show_metadata.php'); ?>" method="get" >
+                <form action="<?php echo SimpleSAML\Module::getModuleURL('core/show_metadata.php'); ?>" method="get" >
                     <fieldset class="fancyfieldset"><legend>Lookup metadata</legend>
                         <p style="margin: 1em 2em ">Look up metadata for entity:
                             <select name="set">
