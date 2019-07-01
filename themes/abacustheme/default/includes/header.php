@@ -56,7 +56,6 @@ if(array_key_exists('header', $this->data)) {
 	<link rel="stylesheet" type="text/css" href="<?php echo SimpleSAML\Module::getModuleURL('abacustheme/css/abacus.css'); ?>" />
 	<link rel="stylesheet" type="text/css" href="<?php echo SimpleSAML\Module::getModuleURL('abacustheme/css/default.css'); ?>" />
 	<link rel="stylesheet" type="text/css" href="<?php echo SimpleSAML\Module::getModuleURL('abacustheme/css/bootstrap.min.css'); ?>" />
-	<link rel="stylesheet" type="text/css" href="<?php echo SimpleSAML\Module::getModuleURL('abacustheme/css/bootstrap-responsive.min.css'); ?>" />
 	<link rel="icon" type="image/icon" href="<?php echo SimpleSAML\Module::getModuleURL('abacustheme/pics/favicon.ico'); ?>" />
 
 <?php
