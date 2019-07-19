@@ -17,7 +17,7 @@ function updateUserState()
     $.ajax({
         type: 'POST',
         cache: false,
-        url: '<?php echo SimpleSAML_Utilities::getBaseURL(); ?>module.php/selfregister/api.php',
+        url: '<?php echo SimpleSAML\Utilities::getBaseURL(); ?>module.php/selfregister/api.php',
         data: 'id=emailexists&email=' + document.getElementById('username').value,
         dataType: 'json',
         success: function(data) {
@@ -28,12 +28,12 @@ function updateUserState()
 		$("#password").focus();
 		$(".btn-login").removeAttr("disabled");
 		$(".btn-lostpwd").removeAttr("disabled");
-		$(".btn-lostpwd").attr("href","<?php echo SimpleSAML_Utilities::getBaseURL(); ?>module.php/selfregister/lostPassword.php?email=" + encodeURIComponent(document.getElementById('username').value) + "<?php echo "&AuthState=" . urlencode($_REQUEST['AuthState']) . '"'?>);
+		$(".btn-lostpwd").attr("href","<?php echo SimpleSAML\Utilities::getBaseURL(); ?>module.php/selfregister/lostPassword.php?email=" + encodeURIComponent(document.getElementById('username').value) + "<?php echo "&AuthState=" . urlencode($_REQUEST['AuthState']) . '"'?>);
 	    } else {
 		$(".next-action").hide();
 		$(".login-action").hide();
 		$(".register-action").show();
-		$(".btn-register").attr("href","<?php echo SimpleSAML_Utilities::getBaseURL(); ?>module.php/selfregister/newUser.php?email=" + encodeURIComponent(document.getElementById('username').value) + "<?php echo "&AuthState=" . urlencode($_REQUEST['AuthState']) . '"'?>);
+		$(".btn-register").attr("href","<?php echo SimpleSAML\Utilities::getBaseURL(); ?>module.php/selfregister/newUser.php?email=" + encodeURIComponent(document.getElementById('username').value) + "<?php echo "&AuthState=" . urlencode($_REQUEST['AuthState']) . '"'?>);
 	    }
         }
     });
