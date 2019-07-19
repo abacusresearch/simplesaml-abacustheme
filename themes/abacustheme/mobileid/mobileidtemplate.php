@@ -9,7 +9,7 @@
  * @author      Swisscom (Schweiz) AG
  */
 
-$this->data['head']  = '<script type="text/javascript" src="' . SimpleSAML\Module::getModuleUrl('mobileid/resources/js/jquery/jquery-1.8.3.min.js') . '"></script>';
+$this->data['head']  = '<script type="text/javascript" src="' . SimpleSAML\Module::getModuleUrl('mobileid/resources/js/jquery/jquery-3.4.1.min.js') . '"></script>';
 $this->data['head'] .= '<script type="text/javascript" src="' . SimpleSAML\Module::getModuleUrl('mobileid/resources/js/mobileid.js') . '"></script>';
 $this->data['head'] .= '<link rel="stylesheet" href="' . SimpleSAML\Module::getModuleUrl('mobileid/resources/css/mobileid.css') . '"/>';
 $this->data['header'] = $this->t('{mobileid:Auth:header}');
