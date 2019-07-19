@@ -49,9 +49,9 @@ foreach ($this->data['metaentries']['hosted'] AS $hm) {
 	if ($hm['entityid'] !== $hm['metadata-index']) 
 		echo '<br />Index: ' . $hm['metadata-index'];
 	if (array_key_exists('name', $hm))
-		echo '<br /><strong>' . $this->getTranslation(SimpleSAML_Utilities::arrayize($hm['name'], 'en')) . '</strong>';
+		echo '<br /><strong>' . $this->getTranslation(SimpleSAML\Utilities::arrayize($hm['name'], 'en')) . '</strong>';
 	if (array_key_exists('descr', $hm))
-		echo '<br /><strong>' . $this->getTranslation(SimpleSAML_Utilities::arrayize($hm['descr'], 'en')) . '</strong>';
+		echo '<br /><strong>' . $this->getTranslation(SimpleSAML\Utilities::arrayize($hm['descr'], 'en')) . '</strong>';
 
 	echo '<br  />[ <a href="' . $hm['metadata-url'] . '">' . $this->t('{core:frontpage:show_metadata}') . '</a> ]';
 	
@@ -70,9 +70,9 @@ foreach($this->data['metaentries']['remote'] AS $setkey => $set) {
 			htmlspecialchars(SimpleSAML\Module::getModuleURL('core/show_metadata.php', array('entityid' => $entry['entityid'], 'set' => $setkey ))) .
 			'">');
 		if (array_key_exists('name', $entry)) {
-			echo htmlspecialchars($this->getTranslation(SimpleSAML_Utilities::arrayize($entry['name'], 'en')));
+			echo htmlspecialchars($this->getTranslation(SimpleSAML\Utilities::arrayize($entry['name'], 'en')));
 		} elseif (array_key_exists('OrganizationDisplayName', $entry)) {
-			echo htmlspecialchars($this->getTranslation(SimpleSAML_Utilities::arrayize($entry['OrganizationDisplayName'], 'en')));
+			echo htmlspecialchars($this->getTranslation(SimpleSAML\Utilities::arrayize($entry['OrganizationDisplayName'], 'en')));
 		} else {
 			echo htmlspecialchars($entry['entityid']);
 		}
