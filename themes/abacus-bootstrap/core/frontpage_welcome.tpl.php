@@ -26,14 +26,4 @@ if ($this->data['isadmin']) {
 </div>
 </div>
 
-<section>
-    <header class="page-header">
-        <h2><?php echo $this->t('{core:frontpage:about_header}'); ?></h2>
-    </header>
-
-<div class="row">
-    <p><?php echo $this->t('{core:frontpage:about_text}'); ?></p>
-</div>
-</section>
-		
 <?php $this->includeAtTemplateBase('includes/footer.php'); ?>

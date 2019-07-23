@@ -117,8 +117,5 @@ if (isset($this->data['logouturl'])) {
 	echo('<p>[ <a href="' . htmlspecialchars($this->data['logouturl']) . '">' . $this->t('{status:logout}') . '</a> ]</p>');
 }
 ?>
-
-	<h2><?php echo $this->t('{core:frontpage:about_header}'); ?></h2>
-	<p><?php echo $this->t('{core:frontpage:about_text}'); ?></p>
 	
 <?php $this->includeAtTemplateBase('includes/footer.php'); ?>

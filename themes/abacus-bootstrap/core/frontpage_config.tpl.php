@@ -33,8 +33,16 @@ if ($this->data['isadmin']) {
             <?php
                 $icon_enabled  = '<img src="/' . $this->data['baseurlpath'] . 'resources/icons/silk/accept.png" alt="enabled" />';
                 $icon_disabled = '<img src="/' . $this->data['baseurlpath'] . 'resources/icons/silk/delete.png" alt="disabled" />';
-                $has_saml20 = $this->data['enablematrix']['saml20-idp'];
-                $has_shib13 = $this->data['enablematrix']['shib13-idp'];
+                if (isset($this->data['enablematrix']['saml20-idp'])) {
+                    $has_saml20 = $this->data['enablematrix']['saml20-idp'];
+                } else {
+                    $has_saml20 = false;
+                }
+                if (isset($this->data['enablematrix']['shib13-idp'])) {
+                    $has_shib13 = $this->data['enablematrix']['shib13-idp'];
+                } else {
+                    $has_shib13 = false;
+                }
             ?>
             <tr class="<?php echo $has_saml20 ? 'success' : 'muted'; ?>">
                 <td>SAML 2.0 IdP</td>
