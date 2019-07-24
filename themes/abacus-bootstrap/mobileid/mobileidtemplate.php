@@ -16,11 +16,6 @@ $this->data['header'] = $this->t('{mobileid:Auth:header}');
 $this->data['autofocus'] = 'msisdn';
 $this->includeAtTemplateBase('includes/header.php');
 
-$this->data['cancel'] = '';
-if (isset($_SESSION['enable_cancel']) && $_SESSION['enable_cancel']) {
-    $this->data['cancel'] = '<input type="button" value="' . $this->t('{mobileid:Auth:form_btn_cancel}') . '" class="btn float-l mobileid-btn-cancel" id="submit_btn_cancel" />';
-}
-
 /* Error description */
 $errorDescr = $this->t('{mobileid:errors:descr_' . $this->data['errorcode'] . '}');
 if (array_key_exists('errorurl', $this->data))
@@ -46,12 +41,7 @@ if (array_key_exists('mnc', $this->data))
 		<input id="msisdn" size="30" name="msisdn" tabindex="1" class="form-control msisdn mobileid-input" type="tel" value="<?php if (isset($_COOKIE["msisdn"])) echo $_COOKIE["msisdn"]; ?>" />
 	</div>
 	</div>
-        <?php
-        if ($this->data['cancel'] !== '')
-            echo($this->data['cancel']);
-        ?>
 	<input type="submit" value="<?php echo $this->t('{mobileid:Auth:form_btn_send}'); ?>" class="btn btn-default btn-primary mobileid-btn-send col-lg-3" id="submit_btn_send" />
-
 	<img style="height:28px; float:right;" src="<?php echo(SimpleSAML\Module::getModuleURL('mobileid/resources/mobileid.png')); ?>" />
 	<?php
 	foreach ($this->data['stateparams'] as $name => $value) {
